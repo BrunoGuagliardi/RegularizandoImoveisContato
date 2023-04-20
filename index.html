@@ -86,13 +86,14 @@
   <script>
    
     function alerta() {
+  var nome = document.getElementById("inputNome");
+  var email = document.getElementById("inputEmail");
+  var telefone = document.getElementById("inputTel");
+  var mensagem = document.getElementById("textareaMensagem");
 
-    var nome = document.getElementById("inputNome");
-
-    if (nome.value != "") {
-        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso!');
-    }
-
+  if (nome.value != "" && email.value != "" && telefone.value != "" && mensagem.value != "") {
+    alert('Obrigado sr(a) ' + nome.value + ', os seus dados foram encaminhados com sucesso!');
+  }
 }
 
   </script>
