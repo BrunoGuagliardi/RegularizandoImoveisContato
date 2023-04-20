@@ -63,13 +63,13 @@
       <div class="row">
         <form class="card">
           <label for="inputNome">Nome completo</label>
-          <input required type="text" id="inputNome" placeholder="Digite seu nome completo">
+          <input required type="text" id="inputNome" onkeyup="check()" placeholder="Digite seu nome completo">
 
           <label for="inputEmail">E-mail</label>
-          <input required type="email" id="inputEmail" placeholder="Digite seu e-mail">
+          <input required type="email" id="inputEmail" onkeyup="check()" placeholder="Digite seu e-mail">
 
           <label for="inputTel">Telefone</label>
-          <input type="tel" id="inputTel" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+          <input type="tel" id="inputTel" class="input-padrao" onkeyup="check()" required placeholder="(XX) XXXXX-XXXX">
         
           <label for="inputComo">Como nos conheceu? (Opcional)</label>
           <input type="text" id="inputComo" placeholder="Digite aqui">
@@ -84,6 +84,17 @@
     </section><!--contato-->
   </div><!--fundocontato-->
   <script>
+    function check() {
+    let NomeIn = document.querySelector('#inputNome');
+    let EmailIn = document.querySelector('#inputEmail');
+    let TelIn = document.querySelector('#inputTel');
+    let ComoIn = document.querySelector('#inputComo');
+    let MensagemIn = document.querySelector('#inputMensagem');
+    
+    if (NomeIn.value == "" || EmailIn.value == "" || TelIn.value == "" || ComoIn.value == "" || MensagemIn.value == "")
+      alert ("Preencha todos os campos!")
+    } 
+      
     function alerta() {
      alert("Formulário preenchido com sucesso!"); 
      }
