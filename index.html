@@ -63,7 +63,7 @@
       <div class="row">
         <form class="card">
           <label for="inputNome">Nome completo</label>
-          <input required type="text" id="inputNome" placeholder="Digite seu nome completo">
+          <input required type="text" id="inputNome" name="nome" placeholder="Digite seu nome completo">
 
           <label for="inputEmail">E-mail</label>
           <input required type="email" id="inputEmail" placeholder="Digite seu e-mail">
@@ -86,8 +86,14 @@
   <script>
    
     function alerta() {
-     alert("Formulário preenchido com sucesso!"); 
-     }
+
+    var nome = document.getElementById("inputNome");
+
+    if (nome.value != "") {
+        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso!');
+    }
+
+}
 
   </script>
   <div class="fundofooter">
